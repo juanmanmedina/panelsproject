@@ -138,59 +138,6 @@ body
     
 }
 
-/* .shines{
-    grid-row: 2/3;
-    display: flex;
-    gap: 2em;
-    justify-content: end;
-}
-
-.shine{
-    height: .25em;
-    width: .75em;    
-}
-
-.ready{
-    background-color: rgb(52, 183, 52);
-}
-
-.armed , .power{
-    background-color: #ff0000;
-}
-
-.shine.fire{
-    background-color: rgb(255, 119, 0);
-}
-
-.arrows{
-    display: grid;
-    grid-row: 1/2;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1em;
-    grid-column: 4/5;
-    text-align: center;
-    padding-right: 1em;
-    
-    
-}
-
-.up , .down{
-    background-color: #9FACB3;
-    height: 1em;
-    width: 1.5em;
-    text-decoration: none;
-    color: #000;
-}
-
-.up{
-    grid-row: 1/2;
-    align-self: flex-end;
-    border-radius: 6px 6px 0 0;
-}
-.down{
-    grid-row: 2/3;
-    border-radius: 0 0 6px 6px;
-} */
 
 .panel__teclado{
     grid-row: 2/3;
@@ -285,23 +232,6 @@ body
 
 
 
-/* .arrow{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: .5em;
-    margin-left: 0;
-    
-
-} */
-
-/* .left{
-    grid-column: 1/2;
-    
-}
-
-.right{
-    grid-column: 2/3;
-} */
 
 
 
@@ -379,21 +309,7 @@ body
     
 }
 
-/* .modes__list{
-    width: fit-content;
-    
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    list-style-type: none;
-    
-} */
 
-/* .mode{
-    display: flex ;
-    box-shadow: 1px 1px 3em 1px  rgba(0, 0, 0, 0.326);
-    
-} */
 
 .mode__buttom{    
     text-align: center;
@@ -443,7 +359,7 @@ body
     }
 
     .nav{
-        grid-column: 1/4;
+        grid-column: 1/5;
         
     }
 
@@ -487,20 +403,11 @@ body
 
 
 
-    /* .modes__list{
-        display: grid;
-        height: fit-content;
-        grid-auto-flow: column;
-        padding-left: 0;
-        font-size: 2vw;
-        
-    
-} */
 
     
 /* Fin de responsive */
 
-}
 
+}
 
 /* Fin de HEADER */
