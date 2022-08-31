@@ -347,28 +347,13 @@ body
     
 }
 
-/* .modes__list{
-    width: fit-content;
-    
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    list-style-type: none;
-    
-} */
 
-/* .mode{
-    display: flex ;
-    box-shadow: 1px 1px 3em 1px  rgba(0, 0, 0, 0.326);
-    
-} */
 
 .mode__buttom{    
     text-align: center;
     background-color: var(--violet);
     padding: .7em;
     width: 8em;
-    /* border: 1px solid var(--green); */
     border-radius: 6px ;
     text-decoration: none;
     color: #f4f4f4;
@@ -444,6 +429,7 @@ body
 
 
     .modes{
+        padding-top: 1em;
         position: relative;
         grid-row: 3/4;
         grid-column: 1/4;
