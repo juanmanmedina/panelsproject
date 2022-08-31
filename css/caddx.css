@@ -398,27 +398,13 @@ body
     margin-top: 5em;
     grid-row: 2/3;
     flex-direction: column;
-    gap: 2;
+    gap: 2em;
     width: 10em;
     
     
 }
 
-/* .modes__list{
-    width: fit-content;
-    
-    display: flex;
-    flex-direction: column;
-    gap: 2;
-    list-style-type: none;
-    
-} */
 
-/* .mode{
-    display: flex ;
-    box-shadow: 1px 1px 3em 1px  rgba(0, 0, 0, 0.326);
-    
-} */
 
 .mode__buttom{    
     text-align: center;
@@ -512,15 +498,7 @@ body
 
 
 
-    /* .modes__list{
-        display: grid;
-        height: fit-content;
-        grid-auto-flow: column;
-        padding-left: 0;
-        font-size: 2vw;
-        
-    
-} */
+
 
     
 /* Fin de responsive */
