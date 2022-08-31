@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/napco_xp_600.css">
+
+    <title>Napco XP 600</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="hamburguer" onclick="desplegarMenu()"><img src="images/hamburger.svg"class="menu"></a>
+            <div class="paneles">
+                <a  class="name" href="index.html">DSC</a>
+                <a  class="name" href="a2k4.html">A2k4</a>
+                <a  class="name" href="a2k4ng.html">A2k4NG</a>
+                <a  class="name" href="a2k8.html">A2K8</a>
+                <a class="name"  href="caddx.html">CADDX</a>
+                <a class="name"  href="honeywell.html">Honeywell</a>
+                <a  class="name" href="paradox.html">Paradox</a>
+                <a  class="name" href="napco_xp_600.html">Napco</a>
+                <a  class="name" href="bosch_880.html">Bosch</a>
+                <a  class="name" href="x28.html">X28</a>
+                
+
+            </div>
+        </nav>
+
+
+    <picture class="logo">
+        <img src="images/securitasargentina_logo.png" class="logo__img">
+    </picture>
+
+
+    <!-- Panel de alarma -->
+
+
+    <div class="panel">        
+        <div class="panel__teclado">
+            <div class="teclado__num">
+                <a class="number one" href="#">1</a>
+                <a class="number two" href="#">2</a>
+                <a class="number three" href="#">3</a>
+                <a class="number four" href="#">4</a>
+                <a class="number five" href="#">5</a>
+                <a class="number six" href="#">6</a>
+                <a class="number seven" href="#">7</a>
+                <a class="number eight" href="#">8</a>
+                <a class="number nine" href="#">9</a>
+                <a class="number asterisco" href="#">*</a>
+                <a class="number zero" href="#">0</a>
+                <a class="number numeral" href="#">#</a>
+            </div>
+            <div class="options">
+                <a href="#" class="rabbit"><img src="images/rabbit.svg" class="rabbit__icon"><h5 class="label__rabbit">Z</h5></a>
+                <a href="#" class="check"><h5 class="check__label">✓</h5></a>
+            </div>
+            <div class="emerg">
+                <a href="#" class="fire">F</a>
+                <a href="#" class="asalt">A</a>
+                <a href="#" class="panic">P</a>
+                <a href="#" class="fire">F</a>
+                <a href="#" class="asalt">A</a>
+                <a href="#" class="panic">P</a>
+            </div>
+
+            
+
+        </div>
+        <div class="lights">
+            <ul class="leds">
+                <a class="circle"></a>
+                <li class="led">ARMED</li>
+                <a class="circle"></a>
+                <li class="led">READY</li>
+                <a class="circle"></a>
+                <li class="led">✓SYSTEM</li>
+                <a class="circle"></a>
+                <li class="led">FIRE</li>
+                <a class="circle"></a>
+                <li class="led">AC</li>
+            </ul>
+            <ul class="zones">
+                <a class="circle"></a>
+                <li class="zone">ZONE 1</li>
+                <a class="circle"></a>
+                <li class="zone">ZONE 2</li>
+                <a class="circle"></a>
+                <li class="zone">ZONE 3</li>
+                <a class="circle"></a>
+                <li class="zone">ZONE 3</li>
+                <a class="circle"></a>
+                <li class="zone">ZONE 4</li>
+                <a class="circle"></a>
+                <li class="zone">ZONE 5</li>
+                <a class="circle"></a>
+                <li class="zone">ZONE 6</li>
+
+
+            </ul>
+        </div>
+
+
+         
+     </div>    
+
+            
+
+
+
+
+       
+        
+
+    <div class="modes">
+
+        <!-- <ul class="modes__list"> -->
+            <a  class="mode__buttom" href="#">Verificación de fallas</a>
+            <a  class="mode__buttom" href="#">En casa</a>
+            <a class="mode__buttom"  href="#">Comandos abreviados</a>
+            <a class="mode__buttom desborde"  href="#">Programar hora</a>
+            <a  class="mode__buttom desborde" href="#">Programar Usuarios</a>
+            <a  class="mode__buttom" href="#">Exclusión</a>
+            <a  class="mode__buttom desborde" href="#">Señales de emergencia</a>
+            <a  class="mode__buttom" href="#">Manual</a>
+    
+            
+    
+        <!-- </ul> -->
+    </div>
+
+
+    </header>
+</body>
+
+<script>
+
+    let counter = 0;
+    const paneles = document.querySelector(`.paneles`);
+    function desplegarMenu(){
+        counter++;
+        if(counter % 2 === 0){
+            paneles.style.display = "none";
+
+        }
+        else{
+            paneles.style.display = "grid";
+            paneles.style.marginTop = "2vh"
+            paneles.style.position = "absolute";
+            paneles.style.textAlign = "center";    
+            paneles.style.background = "#4f41a3";
+        }
+    }
+</script>
+</html>

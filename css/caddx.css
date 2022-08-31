@@ -10,7 +10,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    
     
 }
 
@@ -21,46 +21,223 @@ body
         
 }
 
+/* Comienzo del HEADER */
+
+.header{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5vh 95vh;
+}
+
+/* Barra de navegación */
+
+.nav{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin: 0;
+    padding-top: .3em;
+    background-color: var(--violet);
+    justify-content: space-around; 
+    /* border-bottom: 1px solid var(--green);  */
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 0 3em 0 ;
+    z-index: 999;
+
+}
+
+.hamburguer{
+    display: none;
+}
+
+.paneles{
+    display: flex;
+    justify-content:space-around;
+    gap: 2;
+    list-style-type: none;
+    
+    
+}
+
+.name{
+    padding: .5em ;
+    border-radius: 6px ;
+    text-decoration: none;
+    color: #f4f4f4;
+    transition:all .2s;
+}
+
+.name:hover{
+    /* background-color: var(--green); */
+    /* color: var(--newblue); */
+    display: grid;
+    transform: translatey(.2em);
+    text-shadow: 2.5px  2.5px 5px  #000;
+
+}
+
+
+/* Fin de la barra de navegación */
+
+/* LOGO */
+
+.logo{
+    margin: 2 auto auto 2;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    max-width: fit-content;
+    max-height: fit-content;
+    
+}
+
+.logo__img{
+    
+    width: 10vw;
+    box-shadow: 2px 2px 5em rgba(0, 0, 0, 0.329);}
+
+
+/* Fin de LOGO */
+
+/* Panel de alarmas */
+
+
 .panel{
     grid-row: 2/3;
     grid-column: 1/2;
     margin: 7.5em auto;
     border: 1px solid #fff;
     height: 280px;
-    width: 300px;
+    width: 340px;
     border-radius: 20px 20px 0 0;
     display: grid;
-    grid-template-rows: 1fr 1.5fr;
-    background-color: #f4f4f4;
-     
-    box-shadow: 0 0 3em  rgba(0, 0, 0, 0.529)
+    grid-template-rows: 1fr 1fr;
+    background-color: #f4f4f4; 
+    box-shadow: 0 0 3em  rgba(0, 0, 0, 0.529);
+}
+
+.panel__superior{
+    grid-row: 1/2;
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 .panel__pantalla{
+    grid-column: 1/4;
     grid-row: 1/2;
     border: 1px solid #fff;
-    width: 180px;
+    width: 240px;
     justify-self: center;
     /* border-radius: 25px; */
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    height: 45px;
+    height: 50px;
     align-self: center;
     background-color:#159F4E;
+    justify-self: end;
+    margin-right: 1.5em;
+    
 }
+
+.arrows{
+    display: grid;
+    grid-row: 1/2;
+    grid-template-rows: repeat(2, 1fr);
+    gap: .5em;
+    grid-column: 4/5;
+    text-align: center;
+    padding-right: .5em;
+   
+    
+    
+}
+
+.up , .down{
+    background-color: #9FACB3;
+    height: 1.2em;
+    width: 1.5em;
+    text-decoration: none;
+    color: #000;
+}
+
+.up{
+    grid-row: 1/2;
+    align-self: flex-end;
+    border-radius: 6px 6px 0 0;
+}
+.down{
+    grid-row: 2/3;
+    border-radius: 0 0 6px 6px;
+}
+
+
+.shines{
+    grid-row: 2/3;
+    display: grid;  
+    grid-column: 1/3;
+}
+
+
+
+.shine{  
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    justify-self: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1.5em;
+    text-align: center;
+}
+
+.label__shine{
+    font-size: .4em;
+    align-self: center;
+}
+
+.ready{
+    background-color: rgb(52, 183, 52);
+    height: 0.3em;
+    width: 0.8em;
+    justify-self: center;
+}
+
+.armed , .power{
+    background-color: #ff0000;
+    height: 0.3em;
+    width: 0.8em;
+    justify-self: center;
+
+}
+
+.fire{
+    background-color: rgb(255, 119, 0);
+    height: 0.3em;
+    width: 0.8em;
+    justify-self: center;
+
+}
+
+
 
 .panel__teclado{
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 1.5fr 3fr 1.5fr;
+    grid-template-columns: 1.5fr 3fr .5fr;
     gap: 1em;
+    margin-bottom: -2;
+    grid-column: 1/5;
 }
+
+
+
 .teclado__emerg{
     display: grid;
     grid-column: 1/2;
     grid-template-rows: repeat(4,1fr);
     text-align: center;
-    justify-self: center;  
-    gap: 1.5em;
+    justify-self: center;
+    gap: 2em; 
+   
 }
 
 
@@ -73,40 +250,18 @@ body
     color: rgb(14, 13, 13);
     background-color: #656B7D;
     border-radius: 6px;
-    height: 2em;
-    width: 2em; 
-    justify-self: center; 
-    align-content: center;
-    justify-content: center;   
+    height: 1.5em;
+    width: 2.5em; 
       
 
 }
 
-.asalt, .fire, .panic{
-    display:flex;
-    
+.fire__icon , .asalt__icon , .panic__icon{
+    height: 1.5em;
+    align-self: center;
 }
 
 
-
-
-/* .arrow{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: .5em;
-    margin-left: 0;
-    
-
-} */
-
-/* .left{
-    grid-column: 1/2;
-    
-}
-
-.right{
-    grid-column: 2/3;
-} */
 
 
 
@@ -114,6 +269,7 @@ body
     grid-column: 2/3;
     display: grid;
     grid-template-rows: repeat(4,1fr);
+    margin-right: -2em;
        
 }
 
@@ -152,7 +308,7 @@ body
     background-color: #9FACB3;
     border-top: 1px solid #000;
     border-radius: 50%;
-    height: 1rem; 
+    height: 1.5rem; 
     text-align: center;
     width: 2rem;
     font-weight: bolder;
@@ -169,6 +325,8 @@ body
     display: grid;
     grid-column: 3/4;
     grid-template-columns: .5fr 1fr;
+    gap: .5em;
+    margin-right: .5em;
     
 
 }
@@ -178,28 +336,32 @@ body
     grid-column:1/2;
     display: grid;
     grid-auto-flow: row;
-    
-    
-    grid-template-rows: repeat(5, 1fr);
-    
-    justify-self: center;
+    list-style: none;
+    justify-self: center; 
    
     
     
 }
 
+.label__lights{
+    font-size: .5em;
+    text-align: center;
 
 
-
-.light{
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #ACB4C1;
-    height: .25em;
-    width: .75em;
-    margin-top: .5em;
-    
 }
+
+
+.stay , .chime , .exit , .bypass , .cancel {
+    background-color: #000;
+    height: .2em;
+    width: .7em;
+    justify-self: center;
+    margin-top: -.5em;
+
+       
+}
+
+
 
 
 
@@ -208,46 +370,162 @@ body
     grid-column: 2/3;
     display: grid;
     grid-auto-flow: row;
-    margin-right: 1em;
-    justify-self: right;
-    grid-template-rows: repeat(5, 1fr);
+    justify-self: center;
     text-align: center;
-    gap: .1em;   
+  
     
 }
 .func{
     text-decoration: none; 
     color: rgb(14, 13, 13);
     background-color: #ACB4C1;
-    border-radius: 50%;
+    border-radius: 25px;
     height: 1em;
-    width: 1em;  
+    width: 1em;
 
 }
 
 
-.func .one, .light .one{
-    grid-row: 1/2;
-    
+/* Fin de panel de alarmas */
 
-}
+/* Botones de modos */
 
-.func .two, .light.two{
+
+.modes{
+    position: relative;
+    display: flex;
+    grid-column: 2/3;
+    margin-top: 5em;
     grid-row: 2/3;
+    flex-direction: column;
+    gap: 2;
+    width: 10em;
+    
     
 }
 
-.func .three, .light.three{
-    grid-row: 3/4;
+/* .modes__list{
+    width: fit-content;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2;
+    list-style-type: none;
+    
+} */
+
+/* .mode{
+    display: flex ;
+    box-shadow: 1px 1px 3em 1px  rgba(0, 0, 0, 0.326);
+    
+} */
+
+.mode__buttom{    
+    text-align: center;
+    background-color: var(--violet);
+    padding: .7em;
+    width: 8em;
+    /* border: 1px solid var(--green); */
+    border-radius: 6px ;
+    text-decoration: none;
+    color: #f4f4f4;
+    backdrop-filter: blur(10px); 
+    box-shadow: .3em .5em .5em  rgba(0, 0, 0, 0.529);
+    transition: all .2s;
     
 }
 
-.func .four, .light.four{
-    grid-row: 4/5;
-    
+.mode__buttom:hover{
+    background-color: #f4f4f4;
+    color: var(--violet);
+    position:relative;
+    font-weight: 500;
+    /* transform: scaley(1.1); */
+    box-shadow: 0 0 1.5em #000;
+
+   
 }
 
-.func .five, .light.five{
-    grid-row: 5/6;
+
+/* Fin de botones de modos */
+
+
+
+/* Responsive */
+
+
+@media screen and (max-width:800px){ 
+
+    .header{
+        grid-template-columns: .1fr 2fr .1fr;
+        grid-template-rows: 5vh 50vh 45vh;
+    }
+
+
+    .logo{
+        grid-column: 3;
+        margin-left: -8vw;
+    }
+
+    .nav{
+        grid-column: 1/4;
+        
+    }
+
     
+    .panel{
+        grid-column: 2/3;
+        align-self: center;
+
+        grid-row: 2/3;
+    }
+
+
+    .paneles{
+        display: none;
+    }
+
+    .hamburguer{
+        display: flex;
+        margin-top: .2em;
+    }
+
+    
+
+
+    .modes{
+        position: relative;
+        grid-row: 3/4;
+        grid-column: 1/4;
+        display: flex;
+        flex-direction: row;   
+        flex-wrap: wrap;
+        justify-content:center;
+        padding-bottom: 8em;
+        width: fit-content;
+   
+    }
+
+    .mode__buttom{
+        height: 4em;
+    }
+
+
+
+    /* .modes__list{
+        display: grid;
+        height: fit-content;
+        grid-auto-flow: column;
+        padding-left: 0;
+        font-size: 2vw;
+        
+    
+} */
+
+    
+/* Fin de responsive */
+
 }
+
+
+/* Fin de HEADER */

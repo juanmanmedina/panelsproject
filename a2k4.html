@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/a2k4.css">
 
-    <title>Panel DSC</title>
+    <title>A2k4</title>
 </head>
 <body>
-
-
-    <!-- Comienzo del HEADER -->
-
-
     <header class="header">
         <nav class="nav">
             <a href="#" class="hamburguer" onclick="desplegarMenu()"><img src="images/hamburger.svg"class="menu"></a>
@@ -42,29 +37,52 @@
     <!-- Panel de alarma -->
 
 
-    <div class="panel">
-        <div class="panel__superior">
-            <div class="panel__pantalla">
-            </div>
-            <ul class="lights">
-                <li class="led"><img src="images/check.svg" class="check"></li>
-                <li class="led"><img src="images/padlock_dsc.svg" class="padlock"></li>
-                <li class="led"><img src="images/bell_dsc.svg" class="bell"></li>
-                <li class="led"><img src="images/current.svg" class="current"></li>
+
+    <div class="circle">
+        <div class="display">
+            <ul class="first__column">
+                <li class="led">1</li>
+                <li class="led">2</li>
+                <li class="led">3</li>
+                <li class="led">4</li>
+            </ul>
+            <ul class="second__column">
+                <li class="led">5</li>
+                <li class="led">6</li>
+                <li class="led">7</li>
+                <li class="led">8</li>
+            </ul>
+            <ul class="third__column">
+                <li class="led">Power</li>
+                <li class="led">Bateria</li>
+                <li class="led">Reloj</li>
+                <li class="led">Lin Tel</li>
+                <li class="led">Part 1</li>
+
+            </ul>
+            <ul class="fourth__column">
+                <li class="led">Armado</li>
+                <li class="led">Listo</li>
+                <li class="led">Sirena</li>
+                <li class="led">Comunic</li>
+                <li class="led">Part 2</li>
 
             </ul>
         </div>
+    </div>
+    <div class="panel">
+        <div class="panel__superior">
+
+                <div class="emerg">
+                    <a href="#" class="panic"><img src="/images/police_badge.svg" class="police"></a>
+                    <a href="#" class="fire"><img src="/images/fire.svg" class="flame"></a>
+                    <a href="" class="asalt"><img src="/images/pharmacycross.svg" class="croos"></a>
+                    <a href="" class="bypass"><p class="bypass__label">BYPASS</p></a>
+                </div>
+        </div>
         
         <div class="panel__teclado">
-            <div class="teclado__emerg">
-                <div class="arrow">
-                <a class="left" href="#"><</a>
-                <a class="right" href="#">></a>
-                </div>
-                <a class="emerg" href="#"><img src="images/fire_dsc.svg" class="fire"></a>
-                <a class="emerg" href="#"><img src="images/triangle_dsc.svg"  class="asalt"></a>
-                <a class="emerg" href="#"><img src="images/police_dsc.svg"  class="panic"></a>
-            </div>
+            
             <div class="teclado__num">
                 <div class="first">
 
@@ -86,61 +104,41 @@
                     <a class="number *" href="#">*</a>
                     <a class="number 0" href="#">0</a>
                     <a class="number #" href="#">#</a>
-                
                 </div>
             </div>
 
-            <div class="teclado__func">
-                <a class="func" href="#"><h5 class="label__func">Stay</h5></a>
-                <a class="func" href="#"><h5 class="label__func">Away</h5></a>
-                <a class="func" href="#"><h5 class="label__func">Chime</h5></a>
-                <a class="func" href="#"><h5 class="label__func">Reset</h5></a>
-                <a class="func" href="#"><h5 class="label__func">Exit</h5></a>
+ 
+
+            
 
 
-            </div>
 
 
         </div>
         
     </div>
 
-    <!-- <div class="globo i abajo-derecha">
-        Asalto
-        
-      </h2> 
-      <p>Emergencia médica silenciosa</p>
-      </div> -->
-
-
-      <!--Fin de panel-->
-
-
-
     <div class="modes">
 
-    <!-- <ul class="modes__list"> -->
-        <a  class="mode__buttom" href="#">Verificación de fallas</a>
-        <a  class="mode__buttom" href="#">En casa</a>
-        <a class="mode__buttom"  href="#">Comandos abreviados</a>
-        <a class="mode__buttom desborde"  href="#">Programar hora</a>
-        <a  class="mode__buttom desborde" href="#">Programar Usuarios</a>
-        <a  class="mode__buttom" href="#">Exclusión</a>
-        <a  class="mode__buttom desborde" href="#">Señales de emergencia</a>
-        <a  class="mode__buttom" href="#">Manual</a>
-
-        
-
-    <!-- </ul> -->
-</div>
-
-</header>
-
-<!-- Fin del HEADER -->
-
-
+        <!-- <ul class="modes__list"> -->
+            <a  class="mode__buttom" href="#">Verificación de fallas</a>
+            <a  class="mode__buttom" href="#">En casa</a>
+            <a class="mode__buttom"  href="#">Comandos abreviados</a>
+            <a class="mode__buttom desborde"  href="#">Programar hora</a>
+            <a  class="mode__buttom desborde" href="#">Programar Usuarios</a>
+            <a  class="mode__buttom" href="#">Exclusión</a>
+            <a  class="mode__buttom desborde" href="#">Señales de emergencia</a>
+            <a  class="mode__buttom" href="#">Manual</a>
     
+            
+    
+        <!-- </ul> -->
+    </div>
+
+
+    </header>
 </body>
+
 <script>
 
     let counter = 0;
@@ -157,9 +155,9 @@
             paneles.style.position = "absolute";
             paneles.style.textAlign = "center";    
             paneles.style.background = "#4f41a3";
+            paneles.style.zIndex = 999;
+
         }
     }
 </script>
-
-
 </html>

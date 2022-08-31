@@ -1,4 +1,3 @@
-
 :root{
     --grey: rgba(10, 10, 10, 0.5);
     --green: #02cc7e;
@@ -12,6 +11,7 @@
     margin: 0;
     box-sizing: border-box;
     
+    
 }
 
 body 
@@ -20,7 +20,6 @@ body
     
         
 }
-
 
 /* Comienzo del HEADER */
 
@@ -99,7 +98,6 @@ body
 
 /* Fin de LOGO */
 
-
 /* Panel de alarmas */
 
 
@@ -108,128 +106,114 @@ body
     grid-column: 1/2;
     margin: 7.5em auto;
     border: 1px solid #fff;
-    height: 280px;
-    width: 320px;
-    border-radius: 50px;
+    height: 340px;
+    width: 300px;
+    border-radius: 20px 20px 0 0;
     display: grid;
     grid-template-rows: 1fr 1.5fr;
     background-color: #f4f4f4;
-     
+    row-gap: .5em;
     box-shadow: 0 0 3em  rgba(0, 0, 0, 0.529)
 }
 
 .panel__superior{
     grid-row: 1/2;
+    grid-column: 1/5;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    background-color: #9c9c9cb2;
+    border-radius: 20px 20px 0 0;
+
 
 }
 
 .panel__pantalla{
-    grid-column: 2/3;
+
+    grid-row: 1/2;
     border: 1px solid #fff;
-    width: 100%;
+    width: 240px;
     justify-self: center;
-    border-radius: 15px;
+    /* border-radius: 25px; */
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    height: 75%;
+    height: 50px;
     align-self: center;
-    background-color:#00b378;
+    background-color:#2b1dec;
+    justify-self: center;
+    
 }
 
-.lights{
-    grid-column: 3/4;
-    list-style: none;
-}
-.led{
-    display: grid;
-    margin-left: -2em;
-    margin-top: .7em;
-
-
-}
-
-.padlock , .bell , .check , .current{
-    height: .8em;
-}
 
 .panel__teclado{
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 1.5fr 3fr 1fr;
-    gap: 1em;
-}
-.teclado__emerg{
-    display: grid;
-    grid-column: 1/2;
-    grid-template-rows: repeat(4,1fr);
-    text-align: center;
-    justify-self: center;  
+    grid-template-columns: 1.5fr 3fr 1.5fr;
+    margin-bottom: -1em;
+    grid-column: 1/5;
+    grid-template-rows: .75fr 1.8fr;
 }
 
 
 
 
-
-.emerg{
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 30%;
-    height: 1em;
-    width: 3.5em; 
-    justify-self: center;
-    align-content: center;
-    
-
-}
-
-.asalt, .fire, .panic{
-    height: .8em;
-}
-
-.arrow{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: .5em;
-    margin-left: 0;   
-
-}
-
-.left{
-    grid-column: 1/2;
-    font-weight:bolder;
-    text-align: center;
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 30%;
-    height: 1em;
-    width: 1.5em; 
-    justify-self: center;
-    align-content: center;
-
-    
-}
-
-.right{
+.options{
     grid-column: 2/3;
-    font-weight: bolder;
-    text-align: center;   
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.power , .trouble , .memory , .bypass, .off , .stay , .sleep , .arm{
+    height: 1.4em;
+    width: 1.6em;
+    background-color: #acb9c1;
+    border-radius: 5px 5px 5px 5px;
+    text-decoration: none;
+    color: #000;  
+    text-align: center;
+     
+}
+
+.label__option{
+    font-size: .5em;
+    margin-top: .5em;
+
+}
+
+.power__button{
     height: 1em;
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 30%;
-    width: 1.5em; 
+    margin-top: .2em;
+}
+
+
+.lights{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.yelow , .green{
+    width: 1em;
+    height: 0.5em;
     justify-self: center;
-    align-content: center;
- 
+    border-radius: 50px;
+}
+
+.yelow{
+    grid-row: 1/2;
+    background-color: #ff9300;
+
+}
+.green{
+    grid-row: 2/3;
+    background-color: #05d900;
+
 }
 
 
 
 .teclado__num{
+    grid-row: 2/3;
     grid-column: 2/3;
     display: grid;
     grid-template-rows: repeat(4,1fr);
@@ -240,118 +224,82 @@ body
     grid-row: 1/2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
 }
 
 .second{
     grid-row: 2/3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
 }
 
 .third{
     grid-row: 3/4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
 }
 
 .fourth{
     grid-row: 4/5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
 }
+
+
 
 .number{
     display: grid;
     text-decoration: none;
     color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 30%;
-    height: 1.4em; 
-    width: 2em;
+    background-color: #acb9c1;
+    border-top: 1px solid #000;
+    border-radius: 50%;
+    height: 1.3rem; 
     text-align: center;
-    transition: all .5s;
+    width: 2rem;
+    font-weight: bolder;
+    font-size: .8rem;
+
     
 }
 
-.number:active{
+.clear , .enter {
+    font-size: .5em;
+    padding-top: .4em;
     
-    box-shadow: 1px 1px .9em rgba(0, 0, 0, 0.588);
 }
 
-
-
-.teclado__func{
+.arrows{
     grid-column: 3/4;
+    grid-row: 1/2;
     display: grid;
-    grid-auto-flow: row;
-    margin-right: 40%;
-    
-    text-align: center;
-    gap: .1em;   
-    
-}
-.func{
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 6px;
-    height: 1em; 
-    width: 3em;
-    margin-right: .8em;
+    grid-template-rows: repeat(2 , 1fr);
 }
 
-label__func{
-    font-size: .4em;
+.up , .down{
+    height: 1em;
+    width: 1.5em;
+    background-color: #acb9c1;
+    justify-self: center;
+    border-radius: 20px 10px 20px 10px;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+
 }
+
+
+.up{
+    grid-row: 1/2;
+}
+
+.down{
+    grid-row: 2/3
+}
+
+
+
 
 /* Fin de panel de alarmas */
-
-
-/* .globo{
-    display: none;
-    grid-row: 2/3;
-    margin-top: 39vh;
-    margin-left: 3vw;
-    position: absolute;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 12px;
-    border-radius: var(--borde);
-    padding: var(--borde);
-    --borde: 1em;
-    font-family: sans-serif;
-    z-index: 1; 
-    background-color: white;
-    filter: drop-shadow(0px 0px 1px black) ;
-  }
-
-
-.globo::before{
-  content: '';
-  position: absolute; 
-  z-index: -1;
-  width: var(--colita);
-  height: var(--colita);
-}
-
-.globo.abajo-derecha::before{
-  --colita: 20px;
-  left: 50%;
-  bottom: calc( var(--colita) / -1.5);
-  transform: skewY(30deg) rotateZ(-30deg);
-  border-radius: 0 0 0 10em;
-  box-shadow: 
-    inset calc(var(--colita)/2) calc(var(--colita)/3) 0 0 white;
-}
-
-.globo:active::after{
-    display: block;
-} */
-
 
 /* Botones de modos */
 
@@ -443,6 +391,7 @@ label__func{
         align-self: center;
 
         grid-row: 2/3;
+        margin-top: 10em;
     }
 
 

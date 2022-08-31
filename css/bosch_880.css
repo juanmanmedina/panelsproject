@@ -1,4 +1,3 @@
-
 :root{
     --grey: rgba(10, 10, 10, 0.5);
     --green: #02cc7e;
@@ -11,6 +10,8 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
     
 }
 
@@ -20,7 +21,6 @@ body
     
         
 }
-
 
 /* Comienzo del HEADER */
 
@@ -99,7 +99,6 @@ body
 
 /* Fin de LOGO */
 
-
 /* Panel de alarmas */
 
 
@@ -108,131 +107,77 @@ body
     grid-column: 1/2;
     margin: 7.5em auto;
     border: 1px solid #fff;
-    height: 280px;
-    width: 320px;
-    border-radius: 50px;
+    height: 343px;
+    width: 240px;
     display: grid;
     grid-template-rows: 1fr 1.5fr;
+    border-radius: 5px 5px 0 0;
     background-color: #f4f4f4;
-     
     box-shadow: 0 0 3em  rgba(0, 0, 0, 0.529)
 }
 
-.panel__superior{
+.superior__display{
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-
 }
 
 .panel__pantalla{
-    grid-column: 2/3;
+    
+    grid-row: 1/2;
     border: 1px solid #fff;
-    width: 100%;
-    justify-self: center;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    height: 75%;
-    align-self: center;
-    background-color:#00b378;
-}
-
-.lights{
-    grid-column: 3/4;
-    list-style: none;
-}
-.led{
+    width: 240px;
+    height: 140px;
+    background-color: #000;
+    grid-template-columns: repeat(5, 40px);
+    font-size: .8em;
+    color: #922323;
     display: grid;
-    margin-left: -2em;
-    margin-top: .7em;
+    grid-template-rows: .5fr 1.5fr .5fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    
 
-
+    
+    
+    
 }
 
-.padlock , .bell , .check , .current{
-    height: .8em;
+
+
+.pantalla__led{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #42a2d5;
+
+    
 }
+
+
+
+
+
+
+
+
+
+
 
 .panel__teclado{
+    padding-top: .5em;
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 1.5fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     gap: 1em;
+    grid-column: 1/5;
+    background-color: #d0dff432;
 }
-.teclado__emerg{
-    display: grid;
-    grid-column: 1/2;
-    grid-template-rows: repeat(4,1fr);
-    text-align: center;
-    justify-self: center;  
-}
-
-
-
-
-
-.emerg{
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 30%;
-    height: 1em;
-    width: 3.5em; 
-    justify-self: center;
-    align-content: center;
-    
-
-}
-
-.asalt, .fire, .panic{
-    height: .8em;
-}
-
-.arrow{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: .5em;
-    margin-left: 0;   
-
-}
-
-.left{
-    grid-column: 1/2;
-    font-weight:bolder;
-    text-align: center;
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 30%;
-    height: 1em;
-    width: 1.5em; 
-    justify-self: center;
-    align-content: center;
-
-    
-}
-
-.right{
-    grid-column: 2/3;
-    font-weight: bolder;
-    text-align: center;   
-    height: 1em;
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 30%;
-    width: 1.5em; 
-    justify-self: center;
-    align-content: center;
- 
-}
-
 
 
 .teclado__num{
     grid-column: 2/3;
     display: grid;
     grid-template-rows: repeat(4,1fr);
+    gap: 1em;
+
        
 }
 
@@ -240,118 +185,57 @@ body
     grid-row: 1/2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
+    gap: 1em;
+
 }
 
 .second{
     grid-row: 2/3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
+    gap: 1em;
+
 }
 
 .third{
     grid-row: 3/4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
+    gap: 1em;
+
 }
 
 .fourth{
     grid-row: 4/5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
+    gap: 1em;
+
+
 }
 
 .number{
     display: grid;
     text-decoration: none;
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 30%;
-    height: 1.4em; 
-    width: 2em;
+    color: #000;
+    background-color:#a7a2a2be;
+    height: 1.5rem; 
+    width: 3rem;
     text-align: center;
-    transition: all .5s;
+    border-radius: 6px 6px 6px 6px;
+    font-weight: bolder;
+    font-size: 1em;
+
     
 }
 
-.number:active{
-    
-    box-shadow: 1px 1px .9em rgba(0, 0, 0, 0.588);
+.numeral , .asterisco{
+    align-self: center;
 }
 
 
-
-.teclado__func{
-    grid-column: 3/4;
-    display: grid;
-    grid-auto-flow: row;
-    margin-right: 40%;
-    
-    text-align: center;
-    gap: .1em;   
-    
-}
-.func{
-    text-decoration: none; 
-    color: rgb(14, 13, 13);
-    background-color: #9eaebb76;
-    border-radius: 6px;
-    height: 1em; 
-    width: 3em;
-    margin-right: .8em;
-}
-
-label__func{
-    font-size: .4em;
-}
 
 /* Fin de panel de alarmas */
-
-
-/* .globo{
-    display: none;
-    grid-row: 2/3;
-    margin-top: 39vh;
-    margin-left: 3vw;
-    position: absolute;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 12px;
-    border-radius: var(--borde);
-    padding: var(--borde);
-    --borde: 1em;
-    font-family: sans-serif;
-    z-index: 1; 
-    background-color: white;
-    filter: drop-shadow(0px 0px 1px black) ;
-  }
-
-
-.globo::before{
-  content: '';
-  position: absolute; 
-  z-index: -1;
-  width: var(--colita);
-  height: var(--colita);
-}
-
-.globo.abajo-derecha::before{
-  --colita: 20px;
-  left: 50%;
-  bottom: calc( var(--colita) / -1.5);
-  transform: skewY(30deg) rotateZ(-30deg);
-  border-radius: 0 0 0 10em;
-  box-shadow: 
-    inset calc(var(--colita)/2) calc(var(--colita)/3) 0 0 white;
-}
-
-.globo:active::after{
-    display: block;
-} */
-
 
 /* Botones de modos */
 
@@ -439,6 +323,7 @@ label__func{
 
     
     .panel{
+        margin-top: 10em;
         grid-column: 2/3;
         align-self: center;
 
