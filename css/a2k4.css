@@ -368,7 +368,6 @@ body
     color: var(--violet);
     position:relative;
     font-weight: 500;
-    /* transform: scaley(1.1); */
     box-shadow: 0 0 1.5em #000;
 
    
@@ -429,7 +428,7 @@ body
 
 
     .modes{
-        padding-top: 1em;
+        padding-top: 2em;
         position: relative;
         grid-row: 3/4;
         grid-column: 1/4;

@@ -412,7 +412,6 @@ body
     background-color: var(--violet);
     padding: .7em;
     width: 8em;
-    /* border: 1px solid var(--green); */
     border-radius: 6px ;
     text-decoration: none;
     color: #f4f4f4;
@@ -427,7 +426,6 @@ body
     color: var(--violet);
     position:relative;
     font-weight: 500;
-    /* transform: scaley(1.1); */
     box-shadow: 0 0 1.5em #000;
 
    
