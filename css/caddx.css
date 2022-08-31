@@ -391,6 +391,8 @@ body
 /* Botones de modos */
 
 
+
+
 .modes{
     position: relative;
     display: flex;
@@ -398,12 +400,11 @@ body
     margin-top: 5em;
     grid-row: 2/3;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
     width: 10em;
     
     
 }
-
 
 
 .mode__buttom{    
