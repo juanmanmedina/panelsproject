@@ -28,7 +28,7 @@ body
     margin: 0;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 5vh 95vh;
+    grid-template-rows: .5fr 9.5fr;
 }
 
 /* Barra de navegación */
@@ -479,7 +479,7 @@ body
 
     
     .panel{
-        margin-top: 10em;
+        margin-top: 13em;
         grid-column: 2/3;
         align-self: center;
 
