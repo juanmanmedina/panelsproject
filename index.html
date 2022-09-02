@@ -144,6 +144,7 @@
 <script>
 
     let counter = 0;
+    const modes = document.querySelector(`.modes`)
     const paneles = document.querySelector(`.paneles`);
     function desplegarMenu(){
         counter++;
@@ -154,9 +155,11 @@
         else{
             paneles.style.display = "grid";
             paneles.style.marginTop = "1.5vh"
-            paneles.style.position = "absolute";
+            paneles.style.position = "relative";
             paneles.style.textAlign = "center";    
             paneles.style.background = "#4f41a3";
+            paneles.style.height = "100vh";
+            modes.style.display = "none";
         }
     }
 </script>
