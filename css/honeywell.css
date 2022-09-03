@@ -50,6 +50,11 @@ body
     display: none;
 }
 
+
+.cross__cancel{
+    display: none;
+}
+
 .paneles{
     display: flex;
     justify-content:space-around;
